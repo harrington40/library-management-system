@@ -4,6 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.library.model.*;
 import com.library.repository.*;
 
+import com.library.model.Book;
+import com.library.model.User;
+import com.library.repository.BookRepository;
+import com.library.repository.MemberRepository;
+import com.library.repository.UserRepository;
+
+import javax.annotation.PostConstruct;  // For Java EE
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,11 +19,12 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
+import org.springframework.data.mongodb.core.MongoTemplate;
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -47,6 +55,7 @@ public class DataLoader implements CommandLineRunner {
         this.userRepository = userRepository;
         this.objectMapper = objectMapper;
         this.passwordEncoder = passwordEncoder;
+         
     }
 
     @Override
@@ -93,6 +102,8 @@ public class DataLoader implements CommandLineRunner {
         logger.info("Created new {} user with role {}", username, role);
     }
 
+    @Autowired  // Let Spring inject MongoTemplate
+    private MongoTemplate mongoTemplate;
     private void loadSampleDataIfEmpty() throws IOException {
         if (bookRepository.count() == 0 && memberRepository.count() == 0) {
             try (InputStream inputStream = new ClassPathResource("data.json").getInputStream()) {
