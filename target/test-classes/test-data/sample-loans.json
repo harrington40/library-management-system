@@ -1,0 +1,51 @@
+[
+    {
+      "id": "67e9602be70a4e04126b140b",
+      "bookTitle": "To Kill a Mockingbird",
+      "memberName": "John Doe",
+      "loanDate": "2025-03-30",
+      "dueDate": "2025-04-13",
+      "returned": false
+    },
+    {
+      "id": "67e9602be70a4e04126b140c",
+      "bookTitle": "1984",
+      "memberName": "Alice Smith",
+      "loanDate": "2025-03-28",
+      "dueDate": "2025-04-11",
+      "returned": false
+    },
+    {
+      "id": "67e9602be70a4e04126b140d",
+      "bookTitle": "The Great Gatsby",
+      "memberName": "Robert Brown",
+      "loanDate": "2025-03-25",
+      "dueDate": "2025-04-08",
+      "returned": true
+    },
+    {
+      "id": "67e9602be70a4e04126b140e",
+      "bookTitle": "Pride and Prejudice",
+      "memberName": "Emily White",
+      "loanDate": "2025-03-27",
+      "dueDate": "2025-04-10",
+      "returned": false
+    },
+    {
+      "id": "67e9602be70a4e04126b140f",
+      "bookTitle": "Moby Dick",
+      "memberName": "Michael Johnson",
+      "loanDate": "2025-03-22",
+      "dueDate": "2025-04-05",
+      "returned": true
+    },
+    {
+      "id": "67e9602be70a4e04126b1410",
+      "bookTitle": "The Catcher in the Rye",
+      "memberName": "Sophia Davis",
+      "loanDate": "2025-03-29",
+      "dueDate": "2025-04-12",
+      "returned": false
+    }
+  ]
+  

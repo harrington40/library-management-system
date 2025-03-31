@@ -1,0 +1,51 @@
+[
+    {
+      "id": "67e9602be70a4e04126b150b",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "isbn": "978-0-06-112008-4",
+      "availableCopies": 4,
+      "totalCopies": 5
+    },
+    {
+      "id": "67e9602be70a4e04126b150c",
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "978-0-452-28423-4",
+      "availableCopies": 2,
+      "totalCopies": 3
+    },
+    {
+      "id": "67e9602be70a4e04126b150d",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isbn": "978-0-7432-7356-5",
+      "availableCopies": 0,
+      "totalCopies": 2
+    },
+    {
+      "id": "67e9602be70a4e04126b150e",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "isbn": "978-1-59308-201-7",
+      "availableCopies": 5,
+      "totalCopies": 5
+    },
+    {
+      "id": "67e9602be70a4e04126b150f",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "isbn": "978-0-14-243724-7",
+      "availableCopies": 1,
+      "totalCopies": 3
+    },
+    {
+      "id": "67e9602be70a4e04126b1510",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "isbn": "978-0-316-76948-0",
+      "availableCopies": 3,
+      "totalCopies": 4
+    }
+  ]
+  
