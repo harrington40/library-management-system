@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
 # Copy the built JAR file (assuming it's in target/)
-COPY target/*.jar app.jar
+COPY target/library-management-system-1.0.0.jar app.jar
 
 # Expose the port your Spring Boot app runs on
 EXPOSE 8080
