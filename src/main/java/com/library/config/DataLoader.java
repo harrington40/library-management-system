@@ -4,12 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.library.model.*;
 import com.library.repository.*;
 
-import com.library.model.Book;
-import com.library.model.User;
-import com.library.repository.BookRepository;
-import com.library.repository.MemberRepository;
-import com.library.repository.UserRepository;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -136,4 +130,14 @@ public class DataLoader implements CommandLineRunner {
             super(message, cause);
         }
     }
+
+    @PostConstruct
+public void validateConnection() {
+    try {
+        mongoTemplate.executeCommand("{ ping: 1 }");
+    } catch (Exception e) {
+        logger.error("MongoDB connection failed", e);
+        throw new IllegalStateException("Cannot connect to MongoDB", e);
+    }
+}
 }
