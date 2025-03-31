@@ -1,14 +1,11 @@
-# Use official OpenJDK base image
 FROM eclipse-temurin:17-jdk-jammy
-
-# Set working directory
 WORKDIR /app
-
-# Copy the built JAR file (assuming it's in target/)
 COPY target/library-management-system-1.0.0.jar app.jar
 
-# Expose the port your Spring Boot app runs on
-EXPOSE 8080
+# Wait for MongoDB to be ready (install wait-for-it)
+RUN apt-get update && apt-get install -y wait-for-it
 
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Use an entrypoint script to handle dependencies
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
