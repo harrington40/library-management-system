@@ -1,0 +1,26 @@
+{
+    "books": [
+      {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "isbn": "9780743273565",
+        "publicationYear": 1925,
+        "quantity": 3
+      },
+      {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "isbn": "9780061120084",
+        "publicationYear": 1960,
+        "quantity": 2
+      }
+    ],
+    "members": [
+      {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "1234567890",
+        "address": "123 Main St"
+      }
+    ]
+  }
