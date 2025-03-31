@@ -11,7 +11,7 @@ FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
 # Spring Boot layered JAR optimization
-COPY --from=builder /app/target/*.jar app.jar
+COPY --from=builder /app/target/*.jar  /app/
 RUN java -Djarmode=layertools -jar app.jar extract
 
 EXPOSE 8080
