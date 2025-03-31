@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Library Management System (Java 17 + MongoDB)
 
 ## Project Setup
@@ -10,3 +11,6 @@
 2. Build the project:
 ```bash
 mvn clean install
+=======
+# library-management-system
+>>>>>>> origin/main
