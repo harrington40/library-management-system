@@ -28,6 +28,13 @@
             <version>2.13.0</version>
         </dependency>
 
+        <!-- Spring Boot Actuator for Health Checks -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -60,7 +67,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- ASCII Tables -->
+        <!-- ASCII Tables for CLI Display -->
         <dependency>
             <groupId>com.github.freva</groupId>
             <artifactId>ascii-table</artifactId>
