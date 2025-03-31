@@ -7,5 +7,5 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
-COPY --from=builder /app/target/*.jar client.jar
+COPY --from=builder /app/target/*.jar /app/
 ENTRYPOINT ["java", "-jar", "client.jar"]
