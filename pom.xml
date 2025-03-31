@@ -27,7 +27,7 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.13.0</version>
         </dependency>
-        
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -59,7 +59,7 @@
             <version>4.11.0</version>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- ASCII Tables -->
         <dependency>
             <groupId>com.github.freva</groupId>
