@@ -1,14 +1,11 @@
-# Build and runtime stage (single stage for exec:java)
-FROM maven:3.8.6-eclipse-temurin-17
+# Use official OpenJDK base image
+FROM eclipse-temurin:17-jdk-jammy
 
+# Set working directory
 WORKDIR /app
 
-# Copy only what's needed for Maven
-COPY pom.xml .
-COPY src ./src
+# Copy the built JAR file (assuming it's in target/)
+COPY target/*.jar app.jar
 
-# Download dependencies first (better layer caching)
-RUN mvn dependency:go-offline
-
-# Set default command to run with exec:java
-CMD ["mvn", "exec:java", "-Dexec.mainClass=your.main.ClassName"]
+# Command to run the application
+ENTRYPOINT ["java", "-jar", "app.jar"]
