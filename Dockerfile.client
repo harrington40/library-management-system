@@ -1,0 +1,11 @@
+FROM eclipse-temurin:17-jdk-jammy
+WORKDIR /app
+COPY target/library-cli-1.0-SNAPSHOT.jar app.jar
+
+# Install netcat to check server availability
+RUN apt-get update && apt-get install -y netcat
+
+# Entrypoint script to handle server dependency
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
